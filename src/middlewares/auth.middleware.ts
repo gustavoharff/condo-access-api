@@ -14,7 +14,6 @@ export function auth(req: FastifyRequest, reply: FastifyReply) {
   try {
     const decoded = jsonwebtoken.verify(token, "123");
 
-    console.log(decoded)
     // @ts-ignore
     req.userId = decoded.userId; 
   } catch (err) {
